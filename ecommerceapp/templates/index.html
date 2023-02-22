@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+/* navbar */
+.navbar .navbar-nav .nav-item .nav-link{
+  color: white
+}
+.navbar .container-fluid .navbar-brand{color: white}
+#navbarDarkDropdownMenuLink{color: white;}
+#navbarDarkDropdownMenuLink:hover{color:#d0d9eb;}
+.navbar .container-fluid .nav-item .nav-link:hover{color:#d0d9eb;}
+.navbar .container-fluid .navbar-brand:hover{color:#d0d9eb;}
+.navbar .container-fluid .navbar-toggler{color:black;background-color: white;}
+
+
+/* cariosal 1 */
+
+
+/* carosal 2 */
+  .w-item{height: 250px;
+    background-color:rgb(42, 44, 46);
+}
+  .w-img{height: 100%;
+  object-fit: cover;
+}
+
+/* carosal 3 */
+  .car-item{height: 650px;
+  }
+  .car-img{height: 100%;
+  object-fit: contain;
+}
+
+/* cards */
+
+
+
+  .card{
+    margin: 12% 15%;
+
+    transition: all 0.3s;
+
+  }
+  .card:hover{transform: scale(1.10);
+  }
+
+ /* footer */
+ .footer-img{padding-top: 10px;
+  align-items: center;
+}
+.c-footer .container .row a{
+  text-decoration: none;
+  color: white;
+
+}
+
+
+
+
+
+  </style>
+
+
+
+<script src="https://kit.fontawesome.com/f7c3f44c97.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="font-weight: 600;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="padding: 20px;background-color: black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Gadgets Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto text-center mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Smart Phones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Laptops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TV</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Accessories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="#">Chargers</a></li>
+              <li><a class="dropdown-item" href="#">Cables</a></li>
+              <li><a class="dropdown-item" href="#">Phone Cases</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Register
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/ecommerceapp/shopreg/">Shop Register</a></li>
+
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/ecommerceapp/userregister/">User Register</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/ecommerceapp/shoplog/">Shop Login</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/ecommerceapp/userlogin/">User Login</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin">Admin Login</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="input-group flex-nowrap">
+            <div class="wishlist">
+              <a href="http://127.0.0.1:8000/ecommerceapp/displaywishlist/"><i class="fa-solid fa-heart fa-1x" style="color:white;padding: 12px 10px;"></i></a>
+              <a href="http://127.0.0.1:8000/ecommerceapp/cartdisplay/"><i class="fa-solid fa-cart-shopping fa-1x" style="color:white;padding-right: 15px;"></i></a>
+            </div>
+
+            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping">
+            <span class="input-group-text" id="addon-wrapping"><a href=""><i class="fa-sharp fa-solid fa-magnifying-glass" style="color: black"></i></a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+      <!-- carosal -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-fest/s23-1920x545-020323.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-fest/diamond-drum-wm-1920x545.jpg"  class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-fest/crystal-4k-uhd-tv-desktop.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-fest/sbs-ref-1920x545.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+      <!-- carosal2 -->
+     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i03.appmifile.com/984_operator_in/02/01/2023/988364f1c082eca4f850967d978811dd.jpg?f=webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption top-0 d-none d-md-block " style="color:black">
+        <h2>XIAOMI SMART TV SERIES 5A</h2>
+        <h4>4K DOLBY VISION</h4>
+        <a href="#" class="btn btn-secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i03.appmifile.com/578_operator_in/08/12/2022/832150d20f414942927f2eb1e564b774.jpg?f=webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption top-0 d-none d-md-block" style="color:black">
+        <h2>XIAOMI ROBOT VACCUM MOP-2 PRO</h2>
+        <h4>India’s No. 1 Robot Vacuum Cleaner Brand*</h4>
+        <a href="#" class="btn btn-secondary">Learn more</a>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+      <div class="topdeal bg-secondary" style="height: 150px;width: 100%;">
+        <div class="captions" style="display: flex;justify-content: center;padding-top: 50px;">
+          <h1 style="font-weight: bold;color:white">Top deals on Smart Phones</h1>
+        </div>
+
+
+      </div>
+
+
+        <!-- cards -->
+<div class="container-fluid" style="background-color: #d0d9eb;
+background-image: linear-gradient(180deg, #d0d9eb 0%, #afa7af 100%);width: 100%;
+">
+
+
+
+    <div class="row">
+
+       <!-- 1 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+
+        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
+
+          <img src="https://cdn1.smartprix.com/rx-iiPiwsnmt-w420-h420/apple-iphone-14-pro.webp" style="width: 245px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 55px;padding-right: 20px"  class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 14 Pro </h5>
+            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 1,29,900</p>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
+          <img src="https://cdn1.smartprix.com/rx-izLSMVlI0-w420-h420/samsung-galaxy-s23-u.webp" style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">S23 Ultra</h5>
+            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 1,23,999</p>
+
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
+          <img src="https://cdn1.smartprix.com/rx-ieDYO6q6L-w420-h420/oneplus-11-pro.webp"   style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 40px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">One Plus 11 Pro</h5>
+            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 69,599</p>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- 4 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card text-center" style="width: 18rem;height: 450px;border-radius: 20px;">
+          <img src="https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg"  style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 40px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 13</h5>
+            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 61,999</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- carosal-3 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="https://www.lg.com/in/images/Banner/RAC-Category-Banner-1600x600%201-1.jpg"  class="d-block w-100 c-img" alt="...">
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- footer -->
+  <footer class="container-fluid " style="padding-top: 30px;padding-bottom:30px;color: white;background-color: black;">
+    <div class="containerr">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+
+          <ul style="list-style-type: none;text-align: center;">
+            <h4 style="font-weight: bold;">About us</h4>
+            <li>Company</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy policies</li>
+            <li>Investors</li>
+            <li>Events</li>
+
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+
+          <ul style="list-style-type: none;text-align: center;">
+            <h4 style="font-weight: bold;">Products</h4>
+            <li>Smart Phones</li>
+            <li>Laptops</li>
+            <li>Cameras</li>
+            <li>TV</li>
+            <li>Other electronics</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <ul style="list-style-type: none;text-align: center;" >
+            <h4 style="font-weight: bold;">Help</h4>
+            <li>Ways to Buy</li>
+            <li>Delivery/Returns</li>
+            <li>Order Status</li>
+            <li>Payments</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+
+          <ul style="list-style-type: none;text-align: center;" >
+            <h4 style="font-weight: bold;">Connect Us</h4>
+            <div class="footer-img">
+
+              <li style="display: inline;"><a href=""><i style="color:white;" class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+              <li style="display: inline;padding-left: 10px;"><a href=""><i style="color: white;" class="fa-brands fa-twitter fa-2x"></i></a></li>
+              <li style="display: inline;padding-left: 10px;"></li> <a href=""><i style="color: white;" class="fa-brands fa-instagram fa-2x"></i></a></li>
+            </div>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
