@@ -274,9 +274,10 @@ def userallproducts(request):
 
 
 def addtocart(request,id):
-    usd=request.session['id']
+
     a=productuploadmodel.objects.get(id=id)
-    if cartm.objects.filter(pname=a.pname):
+    usd = request.session['id']
+    if cartm.objects.filter(pname=a.pname,userid=usd):
         return HttpResponse('item already in cart')
     b=cartm(userid=usd,pname=a.pname,price=a.price,des=a.des,pimage=a.pimage)
     b.save()
@@ -316,9 +317,10 @@ def displaycart(request):
 
 
 def wishlist(request,id):
-    usd=request.session['id']
+
     a=productuploadmodel.objects.get(id=id)
-    if wishlistm.objects.filter(pname=a.pname):
+    usd = request.session['id']
+    if wishlistm.objects.filter(pname=a.pname,userid=usd):
         return HttpResponse('ITEM ALREADY IN WISHLIST')
     b=wishlistm(userid=usd,pname=a.pname,price=a.price,des=a.des,pimage=a.pimage)
     b.save()
