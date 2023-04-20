@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">{% load static %}
 <head>
   <style>
 
@@ -231,7 +231,7 @@
 
       <div class="topdeal bg-secondary" style="height: 150px;width: 100%;">
         <div class="captions" style="display: flex;justify-content: center;padding-top: 50px;">
-          <h1 style="font-weight: bold;color:white">Top deals on Smart Phones</h1>
+          <h1 style="font-weight: bold;color:white">Top deals on All Products</h1>
         </div>
 
 
@@ -245,59 +245,22 @@ background-image: linear-gradient(180deg, #d0d9eb 0%, #afa7af 100%);width: 100%;
 
 
 
-    <div class="row">
-
-       <!-- 1 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-
-        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
-
-          <img src="https://cdn1.smartprix.com/rx-iiPiwsnmt-w420-h420/apple-iphone-14-pro.webp" style="width: 245px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 55px;padding-right: 20px"  class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">iPhone 14 Pro </h5>
-            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 1,29,900</p>
-
-
-          </div>
-        </div>
-      </div>
-      <!-- 2 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
-          <img src="https://cdn1.smartprix.com/rx-izLSMVlI0-w420-h420/samsung-galaxy-s23-u.webp" style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">S23 Ultra</h5>
-            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 1,23,999</p>
-
-          </div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card text-center"  style="width: 18rem;height: 450px;border-radius: 20px;">
-          <img src="https://cdn1.smartprix.com/rx-ieDYO6q6L-w420-h420/oneplus-11-pro.webp"   style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 40px;" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">One Plus 11 Pro</h5>
-            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 69,599</p>
-
-          </div>
-        </div>
-
-      </div>
-      <!-- 4 -->
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card text-center" style="width: 18rem;height: 450px;border-radius: 20px;">
-          <img src="https://cdn1.smartprix.com/rx-iVyp4t2Vm-w1200-h1200/Vyp4t2Vm.jpg"  style="width: 260px;height: 280px;;margin-top: 30px;padding: 10px;padding-left: 40px;" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">iPhone 13</h5>
-            <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> 61,999</p>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
+   <div class="row">
+    {% for i,j,k,l,m in thelist %}
+    <div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card text-center" style="width:260px;border-radius:30px">
+  <img src="{% static l %}"  style="width: 260px;height: 230px;;margin-top: 20px;padding: 10px;padding-left: 30px;padding-right: 30px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i}}</h5>
+    <p class="card-text">{{k}}</p>
+      <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> {{j}}</p>
+    <a href="http://127.0.0.1:8000/ecommerceapp/wishlist/{{m}}" class="btn btn-danger"><i class="fa-solid fa-heart"></i></a>
+      <a href="http://127.0.0.1:8000/ecommerceapp/addtocart/{{m}}" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i></a>
   </div>
+</div>
+    </div>
+    {% endfor %}
+    </div>
 </div>
 
 
