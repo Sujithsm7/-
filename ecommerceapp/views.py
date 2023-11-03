@@ -259,9 +259,9 @@ def userlogin(request):
             return redirect(userlogin)
         profile_obj = profile.objects.filter(user=userobj).first()
         request.session['id'] = userobj.id
-        if not profile_obj.is_verified:
-            messages.success(request, 'profile not verified check mail')
-            return redirect(userlogin)
+    #     if not profile_obj.is_verified:
+    #         messages.success(request, 'profile not verified check mail')
+    #         return redirect(userlogin)
         user = authenticate(username=username, password=password)
 
         if user is not None:
